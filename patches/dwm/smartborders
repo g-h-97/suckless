@@ -1,0 +1,11 @@
+smartborders
+Description
+
+Inspired by the xmonad feature of the same name.
+
+Borders are only drawn when:
+
+    client window is floating
+    >1 tiled clients are visible
+    floating layout
+

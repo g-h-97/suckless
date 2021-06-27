@@ -1,0 +1,8 @@
+--- config.def.h
++++ config.def.h
+@@ -39,4 +39,5 @@ static Shortcut shortcuts[] = {
+ 	{ XK_Up,          advance,        {.i = -1} },
+ 	{ XK_Next,        advance,        {.i = +1} },
+ 	{ XK_Prior,       advance,        {.i = -1} },
++	{ XK_x,           toggle_cursor,  {0} },
+ };

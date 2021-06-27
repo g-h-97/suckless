@@ -1,0 +1,9 @@
+swap focus
+Description
+
+This patch makes it possible to switch focus with one single shortcut (alt-s) instead of having to think if you should use alt-j or alt-k for reaching the last used window.
+Changes in 6.2
+
+    Remember the previous tag and previous clients on each tag.
+    If there is no previous client on the current tag (because it was moved or killed), the next client on the current tag is focused.
+

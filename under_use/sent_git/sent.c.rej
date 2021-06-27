@@ -1,0 +1,33 @@
+--- sent.c
++++ sent.c
+@@ -478,6 +480,30 @@ void advance(const Arg *arg)
+ 	}
+ }
+ 
++void toggle_cursor(const Arg *arg)
++{
++	Cursor cursor;
++	XColor color;
++	Pixmap bitmapNoData;
++	char noData[] = { 0, 0, 0, 0, 0, 0, 0, 0 };
++	static int cursor_visible = 1;
++
++	memset(&color, 0, sizeof(color));
++
++
++	if (cursor_visible) {
++		bitmapNoData = XCreateBitmapFromData(xw.dpy, xw.win, noData, 8, 8);
++		cursor = XCreatePixmapCursor(xw.dpy, bitmapNoData,
++					     bitmapNoData, &color, &color, 0, 0);
++		XFreePixmap(xw.dpy, bitmapNoData);
++	} else {
++		cursor = XCreateFontCursor(xw.dpy, XC_left_ptr);
++	}
++	XDefineCursor(xw.dpy, xw.win, cursor);
++	XFreeCursor(xw.dpy, cursor);
++	cursor_visible ^= 1;
++}
++
+ void quit(const Arg *arg)
+ {
+ 	running = 0;

@@ -1,0 +1,17 @@
+--- sent.1
++++ sent.1
+@@ -24,6 +27,14 @@ few minutes.
+ .Bl -tag -width Ds
+ .It Fl v
+ Print version information to stdout and exit.
++.It Fl f Ar font
++Defines the
++.Ar font
++when sent is run.
++.It Fl c Ar fgcolor
++Defines the foreground color when sent is run.
++.It Fl b Ar bgcolor
++Defines the background color when sent is run.
+ .El
+ .Sh USAGE
+ .Bl -tag -width Ds

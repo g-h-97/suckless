@@ -1,0 +1,7 @@
+PAM auth
+Description
+
+Replaces shadow support with PAM authentication support.
+
+Change variable pam_service in config.def.h to the corresponding PAM service. The default configuration is for ArchLinux's login service.
+

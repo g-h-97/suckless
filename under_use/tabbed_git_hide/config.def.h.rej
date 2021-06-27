@@ -1,0 +1,12 @@
+--- config.def.h
++++ config.def.h
+@@ -64,3 +64,9 @@ static Key keys[] = {
+ 
+ 	{ 0,                    XK_F11,    fullscreen,  { 0 } },
+ };
++
++static Key keyreleases[] = {
++	/* modifier             key          function     argument */
++	{ 0,                    XK_Shift_L,  NULL,   { 0 } },
++
++};

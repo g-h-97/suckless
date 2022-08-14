@@ -84,7 +84,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *tabtermcmd[]  = { "tabbed", "-c", "-r 2", "st", "-w", "''", NULL };
-static const char *flameshot[] = { "flameshot", "gui", "-p", "/home/user/Pictures/", NULL };
+static const char *flameshot[] = { "flshot", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
 static const char *slock[] = { "slock", NULL };
 

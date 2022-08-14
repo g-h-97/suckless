@@ -43,12 +43,13 @@ static const Rule rules[] = {
 	 */
 	/* class                    instance  title     tags mask  isfloating  isterminal  noswallow  monitor */
     { "Virt-manager",               NULL,   NULL,   1 << 8,         0,          0,          -1,        -1 },
-	// { "firefoxdeveloperedition",    NULL,   NULL,   1 << 7,         0,          0,          -1,        -1 },
-	{ "IceCat",                     NULL,   NULL,   1 << 7,         0,          0,          -1,        -1 },
+//  { "firefoxdeveloperedition",    NULL,   NULL,   1 << 7,         0,          0,          -1,        -1 },
+//  { "IceCat",                     NULL,   NULL,   1 << 7,         0,          0,          -1,        -1 },
+//  { "LibreWolf",                  NULL,   NULL,   1 << 3,         0,          0,          -1,        -1 },
 	{ "Tor Browser",                NULL,   NULL,   1 << 6,         0,          0,          -1,        -1 },
+	{ "Brave-browser",              NULL,   NULL,   1 << 1,         0,          0,          -1,        -1 },
 	{ "Gimp",                       NULL,   NULL,   1 << 5,         1,          0,           0,        -1 },
 	{ "Transmission-gtk",           NULL,   NULL,   1 << 4,         0,          0,          -1,        -1 },
-	// { "LibreWolf",                  NULL,   NULL,   1 << 3,         0,          0,          -1,        -1 },
 	{ "st",                         NULL,   NULL,       0,          0,          1,          -1,        -1 },
 	{ NULL,                         NULL, "Event Tester", 0,        1,          0,           1,        -1 }, /* xev */
 };
@@ -83,7 +84,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *tabtermcmd[]  = { "tabbed", "-c", "-r 2", "st", "-w", "''", NULL };
+//static const char *tabtermcmd[]  = { "tabbed", "-c", "-r 2", "st", "-w", "''", NULL };
 static const char *flameshot[] = { "flshot", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
 static const char *slock[] = { "slock", NULL };
@@ -105,7 +106,7 @@ static Key keys[] = {
   { 0,                            XK_Print,             spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_p,               spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,          spawn,          {.v = termcmd } },
-	{ Mod4Mask|ShiftMask,          XK_Return,          spawn,          {.v = tabtermcmd } },
+//	{ Mod4Mask|ShiftMask,          XK_Return,          spawn,          {.v = tabtermcmd } },
 	{ MODKEY,                       XK_b,               togglebar,      {0} },
 	{ MODKEY,                       XK_j,               focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,               focusstack,     {.i = -1 } },

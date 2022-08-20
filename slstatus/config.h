@@ -3,7 +3,7 @@
 /* interval between updates (in ms) */
 /* wait 10 minutes */
 // const unsigned int interval = 600000;
-const unsigned int interval = 1000;
+const unsigned int interval = 6000;
 
 /* text to show if no value can be retrieved */
 // static const char unknown_str[] = "n/a";
@@ -69,10 +69,10 @@ static const char unknown_str[] = "";
 static const struct arg args[] = {
 	/* function             format          argument */
 	// { run_command,          "%s",           "slbatnot" },
-    { ipv4,              "%s",           "wlp4s0" },
-    { separator,         "%s",           "|" },
-    { wifi_essid,        "%s",           "wlp4s0" },
-    { separator,         "%s",           "|" },
+    { ipv4,                 "%s",           "wlp4s0" },
+    { separator,            "%s",           "|" },
+    { wifi_essid,           "%s",           "wlp4s0" },
+    { separator,            "%s",           "|" },
     { datetime,             "%s",           "%R" },
     { separator,            "%s",           "|%" },
     // { vol_perc,          "%s",           "/dev/mixer" },

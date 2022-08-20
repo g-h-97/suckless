@@ -94,14 +94,14 @@ static const char *slock[] = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                 function        argument */
-  { 0,                      XF86XK_AudioLowerVolume,    spawn,          SHCMD("amixer -qM set Master 10%-")},
-  { 0,                      XF86XK_AudioRaiseVolume,    spawn,          SHCMD("amixer -qM set Master 10%+")},
-  { ShiftMask,              XF86XK_AudioLowerVolume,    spawn,          SHCMD("xbacklight -5")},
-  { ShiftMask,              XF86XK_AudioRaiseVolume,    spawn,          SHCMD("xbacklight +5")},
-  { ShiftMask|ControlMask,  XF86XK_AudioLowerVolume,    spawn,          SHCMD("xbacklight 0")},
-  { ShiftMask|ControlMask,  XF86XK_AudioRaiseVolume,    spawn,          SHCMD("xbacklight 50")},
-  { 0,                      XF86XK_MonBrightnessDown,   spawn,          SHCMD("xbacklight -5")},
-  { 0,                      XF86XK_MonBrightnessUp,     spawn,          SHCMD("xbacklight +5")},
+  { 0,                      XF86XK_AudioLowerVolume,    spawn,          SHCMD("volume 10%+")},
+  { 0,                      XF86XK_AudioRaiseVolume,    spawn,          SHCMD("volume 10%-")},
+  { ShiftMask,              XF86XK_AudioLowerVolume,    spawn,          SHCMD("brightness -5")},
+  { ShiftMask,              XF86XK_AudioRaiseVolume,    spawn,          SHCMD("brightness +5")},
+  { ShiftMask|ControlMask,  XF86XK_AudioLowerVolume,    spawn,          SHCMD("brightness 0")},
+  { ShiftMask|ControlMask,  XF86XK_AudioRaiseVolume,    spawn,          SHCMD("brightness 50")},
+  { 0,                      XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightness -5")},
+  { 0,                      XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightness +5")},
   { MODKEY,                       XK_c,                 spawn,          {.v = clipmenu } },
   { 0,                            XK_Print,             spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_p,               spawn,          {.v = dmenucmd } },

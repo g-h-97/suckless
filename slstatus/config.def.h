@@ -3,7 +3,7 @@
 /* interval between updates (in ms) */
 /* wait 10 minutes */
 // const unsigned int interval = 600000;
-const unsigned int interval = 1000;
+const unsigned int interval = 6000;
 
 /* text to show if no value can be retrieved */
 // static const char unknown_str[] = "n/a";

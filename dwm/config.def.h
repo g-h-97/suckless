@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int borderpx  = 7;        /* border pixel of windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -94,14 +94,14 @@ static const char *slock[] = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                 function        argument */
-  { 0,                      XF86XK_AudioLowerVolume,    spawn,          SHCMD("amixer -qM set Master 10%-")},
-  { 0,                      XF86XK_AudioRaiseVolume,    spawn,          SHCMD("amixer -qM set Master 10%+")},
-  { ShiftMask,              XF86XK_AudioLowerVolume,    spawn,          SHCMD("xbacklight -5")},
-  { ShiftMask,              XF86XK_AudioRaiseVolume,    spawn,          SHCMD("xbacklight +5")},
-  { ShiftMask|ControlMask,  XF86XK_AudioLowerVolume,    spawn,          SHCMD("xbacklight 0")},
-  { ShiftMask|ControlMask,  XF86XK_AudioRaiseVolume,    spawn,          SHCMD("xbacklight 50")},
-  { 0,                      XF86XK_MonBrightnessDown,   spawn,          SHCMD("xbacklight -5")},
-  { 0,                      XF86XK_MonBrightnessUp,     spawn,          SHCMD("xbacklight +5")},
+  { 0,                      XF86XK_AudioLowerVolume,    spawn,          SHCMD("volume 10%+")},
+  { 0,                      XF86XK_AudioRaiseVolume,    spawn,          SHCMD("volume 10%-")},
+  { ShiftMask,              XF86XK_AudioLowerVolume,    spawn,          SHCMD("brightness -5")},
+  { ShiftMask,              XF86XK_AudioRaiseVolume,    spawn,          SHCMD("brightness +5")},
+  { ShiftMask|ControlMask,  XF86XK_AudioLowerVolume,    spawn,          SHCMD("brightness 0")},
+  { ShiftMask|ControlMask,  XF86XK_AudioRaiseVolume,    spawn,          SHCMD("brightness 100")},
+  { 0,                      XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightness -5")},
+  { 0,                      XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightness +5")},
   { MODKEY,                       XK_c,                 spawn,          {.v = clipmenu } },
   { 0,                            XK_Print,             spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_p,               spawn,          {.v = dmenucmd } },
